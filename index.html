@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vall Mobile – Tecnología & Conectividad para tu Negocio</title>
+<title>Vall Mobile & Luci Mobile – Tecnología & Conectividad para tu Negocio</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -19,6 +19,17 @@
   --fo-blue: #0052FF;
   --fo-cyan: #00D4FF;
   --fo-deep: #0037cc;
+  /* Luci Mobile */
+  --lm-dark:    #0d2b3e;
+  --lm-dark2:   #0a2233;
+  --lm-dark3:   #112d42;
+  --lm-dark4:   #163348;
+  --lm-ice:     #d6f0ff;
+  --lm-ice2:    #aaddff;
+  --lm-accent:  #00b4d8;
+  --lm-accent2: #0077b6;
+  --lm-movistar:#009900;
+  --lm-movistar2:#007a00;
   --border: rgba(255,255,255,0.07);
   --border2: rgba(255,255,255,0.13);
   --font: 'Sora', sans-serif;
@@ -42,16 +53,22 @@ nav {
   border-bottom: 1px solid var(--border);
   transition: background 0.3s;
 }
-.nav-brand { display: flex; align-items: center; gap: 1.5rem; }
+.nav-brand { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
 .nav-logo { font-family: var(--font); font-size: 1.05rem; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
 .nav-logo em { font-style: normal; color: var(--vm-green); }
 .nav-divider { width: 1px; height: 20px; background: var(--border2); }
 .nav-sub { font-family: var(--font); font-size: 0.78rem; font-weight: 600; color: var(--fo-cyan); letter-spacing: 0.5px; }
 .nav-sub span { background: var(--fo-blue); color: #fff; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 3px; font-size: 0.72rem; }
-.nav-links { display: flex; list-style: none; gap: 2.5rem; align-items: center; }
-.nav-links a { font-family: var(--font); font-size: 0.8rem; font-weight: 400; color: var(--text2); text-decoration: none; transition: color 0.2s; }
+/* Luci nav sub */
+.nav-luci { font-family: var(--font); font-size: 0.78rem; font-weight: 700; color: var(--lm-ice); letter-spacing: 0.5px; }
+.nav-luci span { background: var(--lm-accent); color: #fff; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 3px; font-size: 0.72rem; }
+.nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+.nav-links a { font-family: var(--font); font-size: 0.78rem; font-weight: 400; color: var(--text2); text-decoration: none; transition: color 0.2s; }
 .nav-links a:hover { color: var(--text); }
+.nav-links a.lm-link { color: rgba(214,240,255,0.55); }
+.nav-links a.lm-link:hover { color: var(--lm-ice); }
 .nav-cta { background: var(--vm-green) !important; color: #000 !important; font-weight: 600 !important; padding: 0.45rem 1.1rem; border-radius: 20px !important; }
+.nav-cta-lm { background: var(--lm-accent) !important; color: #fff !important; font-weight: 600 !important; padding: 0.45rem 1.1rem; border-radius: 20px !important; }
 .nav-menu-btn { display: none; background: none; border: 1px solid var(--border2); color: var(--text2); padding: 0.4rem 0.7rem; border-radius: 8px; cursor: pointer; font-size: 1rem; }
 
 /* ── HERO ── */
@@ -103,8 +120,15 @@ nav {
 .btn-blue:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,82,255,0.35); }
 .btn-cyan { background: var(--fo-cyan); color: #003; padding: 0.9rem 2.2rem; border-radius: 50px; text-decoration: none; font-family: var(--font); font-weight: 700; font-size: 0.88rem; transition: transform 0.2s, box-shadow 0.2s; }
 .btn-cyan:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,212,255,0.3); }
+.btn-lm { background: var(--lm-ice); color: var(--lm-dark); padding: 0.9rem 2.2rem; border-radius: 50px; text-decoration: none; font-family: var(--font); font-weight: 700; font-size: 0.88rem; transition: transform 0.2s, box-shadow 0.2s; }
+.btn-lm:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(214,240,255,0.2); }
+.btn-movistar { background: var(--lm-movistar); color: #fff; padding: 0.9rem 2.2rem; border-radius: 50px; text-decoration: none; font-family: var(--font); font-weight: 700; font-size: 0.88rem; transition: transform 0.2s, box-shadow 0.2s; }
+.btn-movistar:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,153,0,0.35); }
+.btn-lm-accent { background: var(--lm-accent); color: #fff; padding: 0.9rem 2.2rem; border-radius: 50px; text-decoration: none; font-family: var(--font); font-weight: 700; font-size: 0.88rem; transition: transform 0.2s, box-shadow 0.2s; }
+.btn-lm-accent:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,180,216,0.35); }
+.btn-lm-ghost { background: transparent; color: var(--lm-ice); padding: 0.9rem 2.2rem; border-radius: 50px; border: 1px solid rgba(214,240,255,0.2); text-decoration: none; font-family: var(--font); font-weight: 500; font-size: 0.88rem; transition: all 0.2s; }
+.btn-lm-ghost:hover { border-color: rgba(214,240,255,0.4); background: rgba(214,240,255,0.05); }
 
-/* hero brands pill */
 .hero-brands { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; animation: fadeUp 0.8s 0.32s ease both; }
 .brand-pill { font-family: var(--font); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.5px; padding: 0.3rem 0.8rem; border-radius: 20px; border: 1px solid var(--border2); color: var(--text3); background: var(--bg2); }
 
@@ -115,14 +139,19 @@ nav {
 .stat-num { font-family: var(--font); font-size: 2rem; font-weight: 800; letter-spacing: -1px; color: var(--text); display: block; }
 .stat-num.green { color: var(--vm-green); }
 .stat-num.blue { color: var(--fo-cyan); }
+.stat-num.ice { color: var(--lm-ice); }
+.stat-num.mv { color: #4ddb4d; }
+.stat-num.acc { color: var(--lm-accent); }
 .stat-label { font-size: 0.76rem; color: var(--text3); font-weight: 400; margin-top: 0.2rem; }
 
 /* ── MARQUEE ── */
 .marquee-wrap { background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 1.2rem 0; overflow: hidden; }
-.marquee-track { display: flex; gap: 4rem; animation: marquee 28s linear infinite; width: max-content; }
+.marquee-track { display: flex; gap: 4rem; animation: marquee 30s linear infinite; width: max-content; }
 .marquee-item { font-family: var(--font); font-size: 0.72rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text3); white-space: nowrap; display: flex; align-items: center; gap: 1rem; }
 .marquee-item.m-green::after { content: '·'; color: var(--vm-green); }
 .marquee-item.m-blue::after { content: '·'; color: var(--fo-cyan); }
+.marquee-item.m-lm::after { content: '·'; color: var(--lm-accent); }
+.marquee-item.m-mv::after { content: '·'; color: #4ddb4d; }
 @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
 /* ── SECTION BASE ── */
@@ -130,6 +159,8 @@ nav {
 .section-inner { max-width: 1200px; margin: 0 auto; }
 .eyebrow { font-family: var(--font); font-size: 0.68rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--vm-green); margin-bottom: 0.8rem; }
 .eyebrow.blue { color: var(--fo-cyan); }
+.eyebrow.lm { color: var(--lm-accent); }
+.eyebrow.mv { color: #4ddb4d; }
 .section-title { font-family: var(--font); font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 1rem; color: var(--text); }
 .section-desc { font-size: 1rem; color: var(--text2); font-weight: 300; line-height: 1.75; max-width: 520px; }
 
@@ -155,6 +186,9 @@ nav {
 .badge-green { background: rgba(166,206,57,0.12); color: var(--vm-green); }
 .badge-orange { background: rgba(255,185,0,0.12); color: #ffb900; }
 .badge-gray { background: rgba(255,255,255,0.07); color: var(--text2); }
+.badge-mv { background: rgba(0,153,0,0.15); color: #4ddb4d; }
+.badge-ice { background: rgba(0,180,216,0.12); color: var(--lm-accent); }
+.badge-star { background: rgba(255,185,0,0.12); color: #ffb900; }
 .plan-name { font-family: var(--font); font-size: 1.3rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.5rem; color: var(--text); }
 .plan-desc { font-size: 0.82rem; color: var(--text3); line-height: 1.6; font-weight: 300; margin-bottom: 1.8rem; min-height: 52px; }
 .plan-divider { height: 1px; background: var(--border); margin-bottom: 1.5rem; }
@@ -173,15 +207,8 @@ nav {
 .extra-link:hover { text-decoration: underline; }
 
 /* ── FIBRA ON SECTION ── */
-.fibra-section {
-  background: var(--bg);
-  position: relative; overflow: hidden;
-}
-.fibra-hero-bg {
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(0,82,255,0.12) 0%, transparent 65%);
-  pointer-events: none;
-}
+.fibra-section { background: var(--bg); position: relative; overflow: hidden; }
+.fibra-hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(0,82,255,0.12) 0%, transparent 65%); pointer-events: none; }
 .fibra-grid-bg {
   position: absolute; inset: 0;
   background-image: linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px);
@@ -192,13 +219,7 @@ nav {
 }
 .fibra-inner { position: relative; z-index: 1; }
 .fibra-brand-header { text-align: center; margin-bottom: 5rem; padding-top: 2rem; }
-.fibra-brand-tag {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  font-family: var(--font); font-size: 0.68rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
-  color: var(--text3); margin-bottom: 2rem;
-  padding: 0.35rem 1rem; border: 1px solid var(--border); border-radius: 20px;
-  background: var(--bg2);
-}
+.fibra-brand-tag { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--font); font-size: 0.68rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text3); margin-bottom: 2rem; padding: 0.35rem 1rem; border: 1px solid var(--border); border-radius: 20px; background: var(--bg2); }
 .fibra-brand-tag::before { content: ''; width: 5px; height: 5px; background: var(--fo-cyan); border-radius: 50%; }
 .fibra-logo-big { font-family: var(--font); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; letter-spacing: -2px; color: var(--text); margin-bottom: 1rem; }
 .fibra-logo-big .on { background: var(--fo-cyan); color: #00254a; padding: 0.05rem 0.4rem; border-radius: 8px; margin-left: 8px; font-size: 0.9em; }
@@ -206,8 +227,6 @@ nav {
 .fibra-submarca-badge { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font); font-size: 0.72rem; font-weight: 600; color: var(--text3); padding: 0.3rem 0.9rem; border: 1px solid var(--border); border-radius: 20px; background: var(--bg2); margin-bottom: 2.5rem; }
 .fibra-submarca-badge strong { color: var(--vm-green); }
 .fibra-hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 5rem; }
-
-/* signal */
 .signal-display { display: flex; justify-content: center; margin-bottom: 4rem; }
 .signal-rings { position: relative; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; }
 .signal-dot { width: 14px; height: 14px; background: var(--fo-cyan); border-radius: 50%; position: absolute; box-shadow: 0 0 18px var(--fo-cyan); z-index: 2; }
@@ -216,8 +235,6 @@ nav {
 .ring:nth-child(3){width:78px;height:78px;animation-delay:0.5s}
 .ring:nth-child(4){width:112px;height:112px;animation-delay:1s}
 @keyframes ripple { 0%{opacity:0.7;transform:scale(0.8)} 100%{opacity:0;transform:scale(1.1)} }
-
-/* fibra planes */
 .fibra-plans-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-bottom: 4rem; }
 .fibra-plan { background: var(--bg2); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem 2rem; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; }
 .fibra-plan:hover { border-color: var(--fo-blue); box-shadow: 0 8px 40px rgba(0,82,255,0.12); transform: translateY(-4px); }
@@ -230,8 +247,6 @@ nav {
 .fibra-plan .btn-plan { border-color: rgba(0,82,255,0.3); }
 .fibra-plan:not(.highlight) .btn-plan:hover { background: var(--fo-blue); border-color: var(--fo-blue); color: #fff; }
 .fibra-plan.highlight .btn-plan { background: var(--fo-cyan); border-color: var(--fo-cyan); color: #00254a; }
-
-/* fibra services */
 .servicios-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; margin-top: 3rem; }
 .serv-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 2rem 1.8rem; transition: border-color 0.2s, background 0.2s; }
 .serv-card:hover { border-color: rgba(0,212,255,0.25); background: var(--bg3); }
@@ -239,12 +254,195 @@ nav {
 .serv-card h3 { font-family: var(--font); font-size: 0.92rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text); }
 .serv-card p { font-size: 0.8rem; color: var(--text3); line-height: 1.6; font-weight: 300; }
 
+/* ══════════════════════════════════════
+   LUCI MOBILE SECTION
+══════════════════════════════════════ */
+.luci-section {
+  background: var(--lm-dark2);
+  position: relative; overflow: hidden;
+}
+/* divider entre Vall y Luci */
+.brand-divider {
+  position: relative; overflow: hidden;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--lm-dark2) 100%);
+  padding: 5rem 5% 0;
+  text-align: center;
+}
+.brand-divider-line {
+  width: 100%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(214,240,255,0.15), transparent);
+  margin-bottom: 4rem;
+}
+.brand-divider-tag {
+  display: inline-flex; align-items: center; gap: 1rem;
+  font-family: var(--font); font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(214,240,255,0.4);
+  padding: 0.5rem 1.5rem; border: 1px solid rgba(214,240,255,0.12); border-radius: 30px;
+  background: rgba(214,240,255,0.03);
+  margin-bottom: 3rem;
+}
+.brand-divider-tag .dot-vm { width: 8px; height: 8px; background: var(--vm-green); border-radius: 50%; }
+.brand-divider-tag .dot-lm { width: 8px; height: 8px; background: var(--lm-accent); border-radius: 50%; }
+
+/* Luci hero inside section */
+.luci-hero {
+  padding: 4rem 5% 0;
+  position: relative; overflow: hidden;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,180,216,0.15) 0%, transparent 60%),
+              var(--lm-dark2);
+}
+.luci-hero-grid {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(214,240,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(214,240,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+  pointer-events: none;
+}
+.luci-orb { position: absolute; border-radius: 50%; pointer-events: none; filter: blur(70px); }
+.luci-orb1 { width: 500px; height: 500px; background: rgba(0,180,216,0.10); top: -150px; right: -100px; animation: orbFloat 9s ease-in-out infinite; }
+.luci-orb2 { width: 350px; height: 350px; background: rgba(0,119,182,0.08); bottom: 0; left: -80px; animation: orbFloat 11s ease-in-out infinite reverse; }
+@keyframes orbFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-30px)} }
+.luci-hero-inner { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; text-align: center; padding-bottom: 5rem; }
+.luci-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font); font-size: 0.7rem; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--lm-ice2); margin-bottom: 2rem;
+  padding: 0.4rem 1.1rem; border: 1px solid rgba(214,240,255,0.2); border-radius: 20px;
+  background: rgba(214,240,255,0.04);
+}
+.luci-badge-dot { width: 6px; height: 6px; background: var(--lm-accent); border-radius: 50%; animation: pulse 2s infinite; }
+.luci-logo-big {
+  font-family: var(--font); font-size: clamp(4rem, 12vw, 9rem);
+  font-weight: 800; line-height: 0.9; letter-spacing: -4px;
+  margin-bottom: 0.3rem; color: var(--lm-ice);
+  text-shadow: 0 0 80px rgba(0,180,216,0.35);
+}
+.luci-logo-sub {
+  font-family: var(--font); font-size: clamp(1rem, 3vw, 1.8rem);
+  font-weight: 600; letter-spacing: 8px; text-transform: uppercase;
+  color: var(--lm-accent); margin-bottom: 2rem;
+}
+.luci-hero-sub {
+  font-size: clamp(0.95rem, 2vw, 1.1rem); color: rgba(214,240,255,0.6);
+  max-width: 520px; line-height: 1.8; font-weight: 300; margin-bottom: 2.8rem;
+  margin-left: auto; margin-right: auto;
+}
+.luci-hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3.5rem; }
+.luci-serv-pills { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
+.serv-pill { font-family: var(--font); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.5px; padding: 0.35rem 0.9rem; border-radius: 20px; border: 1px solid rgba(214,240,255,0.12); color: rgba(214,240,255,0.45); background: rgba(214,240,255,0.03); }
+.serv-pill.mv { border-color: rgba(0,153,0,0.3); color: #4ddb4d; background: rgba(0,153,0,0.06); }
+
+/* Luci stats strip */
+.luci-strip { background: var(--lm-dark3); border-top: 1px solid rgba(214,240,255,0.07); border-bottom: 1px solid rgba(214,240,255,0.07); padding: 2rem 5%; display: flex; justify-content: center; gap: 0; flex-wrap: wrap; }
+.luci-stat-item { padding: 0 3.5rem; text-align: center; border-right: 1px solid rgba(214,240,255,0.07); }
+.luci-stat-item:last-child { border-right: none; }
+.luci-stat-num { font-family: var(--font); font-size: 2rem; font-weight: 800; letter-spacing: -1px; display: block; }
+.luci-stat-label { font-size: 0.76rem; color: rgba(214,240,255,0.35); font-weight: 400; margin-top: 0.2rem; }
+
+/* Luci about */
+.luci-about { background: var(--lm-dark2); padding: 7rem 5%; }
+.luci-about-inner { max-width: 1200px; margin: 0 auto; }
+.luci-feats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(214,240,255,0.07); border: 1px solid rgba(214,240,255,0.07); border-radius: 20px; overflow: hidden; }
+.luci-feat { background: var(--lm-dark3); padding: 1.8rem; transition: background 0.2s; }
+.luci-feat:hover { background: var(--lm-dark4); }
+.luci-feat-icon { width: 40px; height: 40px; background: rgba(0,180,216,0.1); border: 1px solid rgba(0,180,216,0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; margin-bottom: 1rem; }
+.luci-feat h4 { font-family: var(--font); font-size: 0.88rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--lm-ice); }
+.luci-feat p { font-size: 0.78rem; color: rgba(214,240,255,0.4); line-height: 1.5; font-weight: 300; }
+.luci-about-text p { color: rgba(214,240,255,0.55); font-weight: 300; line-height: 1.8; margin-bottom: 1rem; font-size: 0.97rem; }
+
+/* Luci Movistar section */
+.luci-movistar { background: var(--lm-dark); padding: 7rem 5%; position: relative; overflow: hidden; }
+.luci-movistar-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(0,153,0,0.08) 0%, transparent 60%); pointer-events: none; }
+.luci-movistar-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+.mv-tag { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--font); font-size: 0.68rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(214,240,255,0.4); margin-bottom: 2rem; padding: 0.35rem 1rem; border: 1px solid rgba(214,240,255,0.1); border-radius: 20px; background: rgba(214,240,255,0.03); }
+.mv-tag::before { content: ''; width: 5px; height: 5px; background: #4ddb4d; border-radius: 50%; }
+.mv-logo-big { font-family: var(--font); font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 800; letter-spacing: -2px; color: var(--lm-ice); margin-bottom: 0.8rem; }
+.mv-logo-big .mv-badge-tag { background: var(--lm-movistar); color: #fff; padding: 0.1rem 0.5rem; border-radius: 8px; margin-left: 10px; font-size: 0.75em; }
+.mv-tagline { font-size: clamp(0.92rem, 2vw, 1.05rem); color: rgba(214,240,255,0.5); font-weight: 300; line-height: 1.7; max-width: 480px; margin: 0 auto 2.5rem; }
+.mv-header-center { text-align: center; margin-bottom: 4rem; }
+.mv-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 4rem; }
+
+/* chip cards */
+.chips-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+.chip-card { background: var(--lm-dark3); border: 1px solid rgba(214,240,255,0.08); border-radius: 20px; padding: 2.2rem 1.8rem; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; }
+.chip-card:hover { border-color: rgba(0,180,216,0.3); box-shadow: 0 8px 40px rgba(0,180,216,0.08); transform: translateY(-4px); }
+.chip-card.highlight { background: linear-gradient(160deg, #0a2a12, #0d3816); border-color: rgba(0,153,0,0.25); }
+.chip-card.highlight:hover { border-color: rgba(0,153,0,0.5); box-shadow: 0 8px 40px rgba(0,153,0,0.12); }
+.chip-name { font-family: var(--font); font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.5rem; color: var(--lm-ice); }
+.chip-desc { font-size: 0.82rem; color: rgba(214,240,255,0.4); line-height: 1.6; font-weight: 300; margin-bottom: 1.8rem; min-height: 48px; }
+.chip-divider { height: 1px; background: rgba(214,240,255,0.07); margin-bottom: 1.5rem; }
+.chip-features { list-style: none; margin-bottom: 2rem; }
+.chip-features li { display: flex; align-items: center; gap: 0.7rem; font-size: 0.82rem; color: rgba(214,240,255,0.55); font-weight: 300; padding: 0.4rem 0; }
+.chip-features li::before { content: ''; width: 16px; height: 16px; flex-shrink: 0; background: rgba(0,153,0,0.12) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%234ddb4d' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/10px no-repeat; border-radius: 50%; }
+.btn-chip { display: block; text-align: center; padding: 0.8rem; border-radius: 12px; font-family: var(--font); font-weight: 600; font-size: 0.83rem; text-decoration: none; transition: all 0.2s; border: 1px solid rgba(214,240,255,0.12); color: var(--lm-ice); }
+.btn-chip:hover, .chip-card.highlight .btn-chip { background: var(--lm-movistar); border-color: var(--lm-movistar); color: #fff; }
+
+/* portability banner */
+.portability-banner { background: linear-gradient(135deg, var(--lm-dark3) 0%, rgba(0,119,182,0.2) 100%); border: 1px solid rgba(0,180,216,0.2); border-radius: 20px; padding: 2.5rem 3rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+.port-left { flex: 1; min-width: 260px; }
+.port-icon { font-size: 2.2rem; margin-bottom: 0.8rem; display: block; }
+.port-title { font-family: var(--font); font-size: 1.3rem; font-weight: 700; color: var(--lm-ice); margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+.port-desc { font-size: 0.88rem; color: rgba(214,240,255,0.5); font-weight: 300; line-height: 1.6; max-width: 380px; }
+.port-right { flex-shrink: 0; }
+.port-steps { display: flex; flex-direction: column; gap: 0.5rem; }
+.port-step { display: flex; align-items: center; gap: 0.8rem; font-size: 0.82rem; color: rgba(214,240,255,0.6); font-weight: 300; }
+.port-step-num { width: 24px; height: 24px; background: rgba(0,180,216,0.15); border: 1px solid rgba(0,180,216,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font); font-size: 0.68rem; font-weight: 700; color: var(--lm-accent); flex-shrink: 0; }
+
+/* luci extras */
+.luci-extras-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(214,240,255,0.06); border-radius: 20px; overflow: hidden; border: 1px solid rgba(214,240,255,0.06); }
+.luci-extra-card { background: var(--lm-dark3); padding: 2rem 2.5rem; display: flex; align-items: center; gap: 1.8rem; transition: background 0.2s; }
+.luci-extra-card:hover { background: var(--lm-dark4); }
+.luci-extra-icon { width: 64px; height: 64px; background: rgba(0,180,216,0.06); border: 1px solid rgba(0,180,216,0.12); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; flex-shrink: 0; }
+.luci-extra-info h3 { font-family: var(--font); font-size: 0.95rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--lm-ice); }
+.luci-extra-info p { font-size: 0.8rem; color: rgba(214,240,255,0.4); line-height: 1.5; font-weight: 300; margin-bottom: 0.7rem; }
+.luci-extra-link { font-size: 0.8rem; color: var(--lm-accent); text-decoration: none; font-weight: 500; }
+.luci-extra-link:hover { text-decoration: underline; }
+
+/* Luci fibra hogar */
+.luci-fibra { background: var(--lm-dark2); padding: 7rem 5%; position: relative; overflow: hidden; }
+.luci-fibra-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(0,180,216,0.10) 0%, transparent 60%); pointer-events: none; }
+.luci-fibra-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+.luci-fibra-header { text-align: center; margin-bottom: 4rem; }
+.luci-fibra-logo { font-family: var(--font); font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -2px; color: var(--lm-ice); margin-bottom: 0.8rem; }
+.luci-fibra-logo .hogar { background: var(--lm-accent); color: #fff; padding: 0.05rem 0.5rem; border-radius: 8px; margin-left: 10px; font-size: 0.75em; }
+.luci-fibra-tagline { font-size: clamp(0.92rem, 2vw, 1.05rem); color: rgba(214,240,255,0.5); font-weight: 300; line-height: 1.7; max-width: 460px; margin: 0 auto 2.5rem; }
+.luci-fibra-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 4rem; }
+/* signal rings luci */
+.luci-signal { display: flex; justify-content: center; margin-bottom: 4rem; }
+.luci-signal-rings { position: relative; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; }
+.luci-signal-dot { width: 12px; height: 12px; background: var(--lm-ice); border-radius: 50%; position: absolute; box-shadow: 0 0 16px var(--lm-ice); z-index: 2; }
+.lring { position: absolute; border: 1px solid rgba(214,240,255,0.3); border-radius: 50%; animation: ripple 2.5s ease-out infinite; }
+.lring:nth-child(2){width:38px;height:38px;animation-delay:0s}
+.lring:nth-child(3){width:66px;height:66px;animation-delay:0.5s}
+.lring:nth-child(4){width:94px;height:94px;animation-delay:1s}
+
+/* fibra hogar plans */
+.luci-fibra-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-bottom: 3rem; }
+.luci-fibra-plan { background: var(--lm-dark3); border: 1px solid rgba(214,240,255,0.08); border-radius: 20px; padding: 2.5rem 2rem; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; }
+.luci-fibra-plan:hover { border-color: rgba(0,180,216,0.3); box-shadow: 0 8px 40px rgba(0,180,216,0.10); transform: translateY(-4px); }
+.luci-fibra-plan.highlight { background: linear-gradient(160deg, #0a1e30, #0c2540); border-color: rgba(0,180,216,0.25); }
+.luci-plan-speed { font-family: var(--font); font-size: 3rem; font-weight: 800; letter-spacing: -2px; color: var(--lm-ice); line-height: 1; margin-bottom: 0.2rem; }
+.luci-plan-speed-label { font-size: 0.75rem; color: rgba(214,240,255,0.35); font-weight: 500; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1.5rem; }
+.luci-fibra-plan .chip-features li::before { background-color: rgba(0,180,216,0.1); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%2300b4d8' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+.luci-fibra-plan .btn-chip { border-color: rgba(0,180,216,0.2); }
+.luci-fibra-plan:not(.highlight) .btn-chip:hover { background: var(--lm-accent); border-color: var(--lm-accent); color: #fff; }
+.luci-fibra-plan.highlight .btn-chip { background: var(--lm-ice); border-color: var(--lm-ice); color: var(--lm-dark); }
+
+/* luci servicios */
+.luci-servicios { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; margin-top: 3rem; }
+.luci-serv-card { background: var(--lm-dark3); border: 1px solid rgba(214,240,255,0.07); border-radius: 16px; padding: 2rem 1.8rem; transition: border-color 0.2s, background 0.2s; }
+.luci-serv-card:hover { border-color: rgba(0,180,216,0.2); background: var(--lm-dark4); }
+.luci-serv-card h3 { font-family: var(--font); font-size: 0.92rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--lm-ice); }
+.luci-serv-card p { font-size: 0.8rem; color: rgba(214,240,255,0.4); line-height: 1.6; font-weight: 300; }
+
 /* ── CONTACT ── */
 .contact-section { background: var(--bg2); }
 .contact-tabs { display: flex; gap: 1rem; margin-bottom: 3.5rem; flex-wrap: wrap; }
 .ctab { font-family: var(--font); font-size: 0.82rem; font-weight: 600; padding: 0.55rem 1.4rem; border-radius: 50px; cursor: pointer; transition: all 0.2s; border: 1px solid var(--border2); color: var(--text2); background: transparent; }
 .ctab.active-vm { background: var(--vm-green); color: #000; border-color: var(--vm-green); }
 .ctab.active-fo { background: var(--fo-blue); color: #fff; border-color: var(--fo-blue); }
+.ctab.active-lm { background: var(--lm-accent); color: #fff; border-color: var(--lm-accent); }
 .contact-panel { display: none; }
 .contact-panel.active { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start; }
 .contact-cards { display: flex; flex-direction: column; gap: 1px; background: var(--border); border-radius: 20px; overflow: hidden; border: 1px solid var(--border); }
@@ -252,8 +450,12 @@ nav {
 .contact-card:hover { background: var(--bg4); }
 .cc-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(166,206,57,0.08); border: 1px solid rgba(166,206,57,0.15); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; flex-shrink: 0; }
 .cc-icon.blue { background: rgba(0,82,255,0.1); border-color: rgba(0,82,255,0.2); }
+.cc-icon.lm { background: rgba(0,180,216,0.1); border-color: rgba(0,180,216,0.2); }
+.cc-icon.mvicon { background: rgba(0,153,0,0.1); border-color: rgba(0,153,0,0.2); }
 .cc-label { font-family: var(--font); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.5px; color: var(--vm-green); text-transform: uppercase; margin-bottom: 0.15rem; }
 .cc-label.blue { color: var(--fo-cyan); }
+.cc-label.lm { color: var(--lm-accent); }
+.cc-label.mv { color: #4ddb4d; }
 .cc-value { font-size: 0.9rem; color: var(--text); font-weight: 400; }
 .contact-form-wrap { background: var(--bg3); border: 1px solid var(--border); border-radius: 24px; padding: 2.5rem; }
 .cf-title { font-family: var(--font); font-size: 1.05rem; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 0.3rem; color: var(--text); }
@@ -264,59 +466,65 @@ nav {
 .fg input::placeholder, .fg textarea::placeholder { color: var(--text3); }
 .fg input:focus, .fg textarea:focus, .fg select:focus { border-color: rgba(166,206,57,0.35); background: rgba(255,255,255,0.02); }
 .fg.blue-focus input:focus, .fg.blue-focus textarea:focus, .fg.blue-focus select:focus { border-color: rgba(0,82,255,0.4); }
+.fg.lm-focus input:focus, .fg.lm-focus textarea:focus, .fg.lm-focus select:focus { border-color: rgba(0,180,216,0.4); }
 .fg select option { background: var(--bg3); color: var(--text); }
 .fg textarea { resize: vertical; min-height: 100px; }
 .btn-submit { width: 100%; border: none; padding: 0.92rem; border-radius: 12px; font-family: var(--font); font-size: 0.88rem; font-weight: 700; cursor: pointer; transition: opacity 0.2s, transform 0.2s; margin-top: 0.4rem; }
 .btn-submit.green { background: linear-gradient(90deg, var(--vm-green2), var(--vm-green)); color: #000; }
 .btn-submit.blue { background: linear-gradient(90deg, var(--fo-deep), var(--fo-blue)); color: #fff; }
+.btn-submit.lm-sub { background: linear-gradient(90deg, var(--lm-accent2), var(--lm-accent)); color: #fff; }
 .btn-submit:hover { opacity: 0.9; transform: translateY(-1px); }
 
 /* ── FOOTER ── */
 footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3rem 5% 2rem; }
 .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; margin-bottom: 2.5rem; }
-.footer-brand { }
 .footer-logo-main { font-family: var(--font); font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 0.4rem; }
 .footer-logo-main em { font-style: normal; color: var(--vm-green); }
-.footer-sub-brand { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; }
+.footer-sub-brand { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; flex-wrap: wrap; }
 .footer-sub-label { font-family: var(--font); font-size: 0.75rem; color: var(--text3); }
 .footer-fibra { font-family: var(--font); font-size: 0.82rem; font-weight: 700; color: var(--fo-cyan); }
 .footer-fibra .on { background: var(--fo-blue); color: #fff; padding: 0.05rem 0.3rem; border-radius: 4px; margin-left: 3px; font-size: 0.7rem; }
-.footer-tagline { font-size: 0.78rem; color: var(--text3); font-weight: 300; margin-top: 0.7rem; max-width: 220px; line-height: 1.6; }
-.footer-cols { display: flex; gap: 4rem; flex-wrap: wrap; }
+.footer-luci { font-family: var(--font); font-size: 0.82rem; font-weight: 700; color: var(--lm-ice); margin-left: 0.8rem; }
+.footer-tagline { font-size: 0.78rem; color: var(--text3); font-weight: 300; margin-top: 0.7rem; max-width: 240px; line-height: 1.6; }
+.footer-cols { display: flex; gap: 3rem; flex-wrap: wrap; }
 .footer-col h5 { font-family: var(--font); font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); margin-bottom: 1rem; }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
 .footer-col a { font-size: 0.82rem; color: var(--text3); text-decoration: none; transition: color 0.2s; }
 .footer-col a:hover { color: var(--text); }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 2rem; border-top: 1px solid var(--border); }
 .footer-copy { font-size: 0.76rem; color: var(--text3); }
-.footer-badges { display: flex; gap: 0.6rem; }
+.footer-badges { display: flex; gap: 0.6rem; flex-wrap: wrap; }
 .fbadge { font-family: var(--font); font-size: 0.65rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 6px; letter-spacing: 0.5px; }
 .fbadge.green { background: rgba(166,206,57,0.1); color: var(--vm-green); border: 1px solid rgba(166,206,57,0.15); }
 .fbadge.blue { background: rgba(0,82,255,0.1); color: #80aaff; border: 1px solid rgba(0,82,255,0.2); }
+.fbadge.lm { background: rgba(0,180,216,0.1); color: var(--lm-accent); border: 1px solid rgba(0,180,216,0.15); }
+.fbadge.mv { background: rgba(0,153,0,0.1); color: #4ddb4d; border: 1px solid rgba(0,153,0,0.15); }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 960px) {
   .nav-links { display: none; }
   .nav-menu-btn { display: block; }
   .about-grid, .contact-panel.active { grid-template-columns: 1fr; gap: 3rem; }
-  .feats-grid { grid-template-columns: 1fr 1fr; }
-  .phones-grid { grid-template-columns: 1fr; }
-  .fibra-plans-grid { grid-template-columns: 1fr; }
-  .servicios-grid { grid-template-columns: 1fr 1fr; }
-  .extras-row { grid-template-columns: 1fr; }
+  .feats-grid, .luci-feats-grid { grid-template-columns: 1fr 1fr; }
+  .phones-grid, .chips-row { grid-template-columns: 1fr; }
+  .fibra-plans-grid, .luci-fibra-grid { grid-template-columns: 1fr; }
+  .servicios-grid, .luci-servicios { grid-template-columns: 1fr 1fr; }
+  .extras-row, .luci-extras-row { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
-  .stat-item { padding: 1rem 1.5rem; }
-  footer { flex-direction: column; text-align: center; }
+  .stat-item, .luci-stat-item { padding: 1rem 1.5rem; }
+  .portability-banner { flex-direction: column; }
+  footer { flex-direction: column; }
   .footer-top { flex-direction: column; }
   .footer-cols { gap: 2.5rem; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
 @media (max-width: 600px) {
-  .feats-grid { grid-template-columns: 1fr; }
-  .servicios-grid { grid-template-columns: 1fr; }
+  .feats-grid, .luci-feats-grid { grid-template-columns: 1fr; }
+  .servicios-grid, .luci-servicios { grid-template-columns: 1fr; }
   nav { padding: 0 4%; }
-  .section { padding: 5rem 4%; }
+  .section, .luci-about, .luci-movistar, .luci-fibra { padding: 5rem 4%; }
   .hero { padding: 7rem 4% 4rem; }
+  .luci-hero { padding: 4rem 4% 0; }
 }
 </style>
 </head>
@@ -328,15 +536,17 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3r
     <div class="nav-logo">Vall <em>Mobile</em></div>
     <div class="nav-divider"></div>
     <div class="nav-sub">Fibra<span>ON</span></div>
+    <div class="nav-divider"></div>
+    <div class="nav-luci">LUCI<span>Mobile</span></div>
   </div>
   <ul class="nav-links">
     <li><a href="#nosotros">Nosotros</a></li>
     <li><a href="#equipos">Equipos</a></li>
     <li><a href="#fibra">FibraOn</a></li>
-    <li><a href="#planes-fibra">Planes</a></li>
+    <li><a href="#luci" class="lm-link">Luci Mobile</a></li>
     <li><a href="#contacto" class="nav-cta">Contactar</a></li>
   </ul>
-  <button class="nav-menu-btn" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'">☰</button>
+  <button class="nav-menu-btn" onclick="toggleMenu()">☰</button>
 </nav>
 
 <!-- ══ HERO ══ -->
@@ -344,10 +554,11 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3r
   <div class="hero-grid"></div>
   <div class="hero-badge"><span class="hero-badge-dot"></span>Ate, Lima · Tecnología & Conectividad</div>
   <h1>Tecnología que<br><span class="g">conecta tu mundo.</span></h1>
-  <p class="hero-sub">Vall Mobile reúne lo mejor en celulares multimarca y conectividad de fibra óptica para empresas, todo en un solo lugar.</p>
+  <p class="hero-sub">Vall Mobile reúne lo mejor en celulares multimarca, conectividad de fibra óptica empresarial y planes Movistar, todo en un solo lugar.</p>
   <div class="hero-actions">
     <a href="https://wa.me/51967282658" target="_blank" class="btn-green">📱 Celulares</a>
-    <a href="#fibra" class="btn-blue">🌐 Internet Fibra</a>
+    <a href="#fibra" class="btn-blue">🌐 FibraOn</a>
+    <a href="#luci" class="btn-lm">📶 Luci Mobile</a>
     <a href="#nosotros" class="btn-ghost">Conocernos →</a>
   </div>
   <div class="hero-brands">
@@ -358,6 +569,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3r
     <span class="brand-pill">ZTE</span>
     <span class="brand-pill">Fibra Óptica</span>
     <span class="brand-pill">IP Fija</span>
+    <span class="brand-pill">Movistar</span>
   </div>
 </section>
 
@@ -365,7 +577,8 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3r
 <div class="strip">
   <div class="stat-item"><span class="stat-num green">6+</span><div class="stat-label">Marcas de celulares</div></div>
   <div class="stat-item"><span class="stat-num">100%</span><div class="stat-label">Equipos originales</div></div>
-  <div class="stat-item"><span class="stat-num blue">200Mbps</span><div class="stat-label">Velocidad máxima fibra</div></div>
+  <div class="stat-item"><span class="stat-num blue">200Mbps</span><div class="stat-label">Vel. máx. FibraOn</div></div>
+  <div class="stat-item"><span class="stat-num mv">Movistar</span><div class="stat-label">Planes & chips</div></div>
   <div class="stat-item"><span class="stat-num green">4.9★</span><div class="stat-label">Valoración promedio</div></div>
 </div>
 
@@ -379,10 +592,13 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3r
     <span class="marquee-item m-green">ZTE</span>
     <span class="marquee-item m-blue">Fibra Óptica</span>
     <span class="marquee-item m-blue">IP Fija</span>
-    <span class="marquee-item m-blue">Firewall Cloud</span>
+    <span class="marquee-item m-blue">FibraOn</span>
+    <span class="marquee-item m-mv">Chips Movistar</span>
+    <span class="marquee-item m-mv">Portabilidad</span>
+    <span class="marquee-item m-lm">Luci Mobile</span>
+    <span class="marquee-item m-lm">Internet Hogar</span>
     <span class="marquee-item m-green">Garantía Oficial</span>
     <span class="marquee-item m-green">Financiamiento</span>
-    <span class="marquee-item m-blue">FibraOn</span>
     <span class="marquee-item m-green">Ate Lima</span>
     <span class="marquee-item m-green">Samsung</span>
     <span class="marquee-item m-green">Honor</span>
@@ -391,10 +607,13 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3r
     <span class="marquee-item m-green">ZTE</span>
     <span class="marquee-item m-blue">Fibra Óptica</span>
     <span class="marquee-item m-blue">IP Fija</span>
-    <span class="marquee-item m-blue">Firewall Cloud</span>
+    <span class="marquee-item m-blue">FibraOn</span>
+    <span class="marquee-item m-mv">Chips Movistar</span>
+    <span class="marquee-item m-mv">Portabilidad</span>
+    <span class="marquee-item m-lm">Luci Mobile</span>
+    <span class="marquee-item m-lm">Internet Hogar</span>
     <span class="marquee-item m-green">Garantía Oficial</span>
     <span class="marquee-item m-green">Financiamiento</span>
-    <span class="marquee-item m-blue">FibraOn</span>
     <span class="marquee-item m-green">Ate Lima</span>
   </div>
 </div>
@@ -407,14 +626,14 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3r
       <div class="about-text">
         <h2 class="section-title">Tu tienda de confianza en Ate</h2>
         <p>Vall Mobile es una empresa especializada en tecnología y conectividad, con sede en el CC Las Brisas de Ate, Lima. Nuestro equipo está comprometido con brindarte los mejores equipos y soluciones para que siempre estés conectado.</p>
-        <p>Además de nuestra tienda multimarca de celulares, ofrecemos internet de fibra óptica para negocios a través de <strong style="color:var(--fo-cyan)">FibraOn</strong>, nuestra submarca especializada en conectividad empresarial.</p>
+        <p>Además de nuestra tienda multimarca de celulares, ofrecemos internet de fibra óptica para negocios a través de <strong style="color:var(--fo-cyan)">FibraOn</strong>, y planes Movistar para hogares a través de <strong style="color:var(--lm-ice)">Luci Mobile</strong>.</p>
         <a href="https://wa.me/51967282658" target="_blank" class="btn-green" style="display:inline-block;margin-top:1.8rem;">Consultar ahora →</a>
       </div>
       <div class="feats-grid">
         <div class="feat"><div class="feat-icon">📱</div><h4>Equipos originales</h4><p>100% originales con garantía oficial incluida, sin sorpresas.</p></div>
         <div class="feat"><div class="feat-icon">🏷️</div><h4>Mejores precios</h4><p>Precios competitivos y ofertas exclusivas para nuestros clientes.</p></div>
-        <div class="feat"><div class="feat-icon">💳</div><h4>Financiamiento</h4><p>Llévate tu equipo hoy y págalo en cómodas cuotas mensuales.</p></div>
         <div class="feat"><div class="feat-icon">🌐</div><h4>FibraOn</h4><p>Conectividad empresarial de fibra óptica con IP fija y soporte 24/7.</p></div>
+        <div class="feat"><div class="feat-icon">📶</div><h4>Luci Mobile</h4><p>Planes Movistar, chips, portabilidad e internet fibra para el hogar.</p></div>
       </div>
     </div>
   </div>
@@ -497,7 +716,6 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3r
   <div class="fibra-hero-bg"></div>
   <div class="fibra-grid-bg"></div>
   <div class="section-inner fibra-inner">
-
     <div class="fibra-brand-header">
       <div class="fibra-brand-tag">Submarca de Vall Mobile · Conectividad Empresarial</div>
       <div class="fibra-logo-big">FIBRA<span class="on">ON</span></div>
@@ -516,12 +734,9 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3r
         </div>
       </div>
     </div>
-
-    <!-- Planes fibra -->
     <p class="eyebrow blue" style="text-align:center;margin-bottom:0.5rem;" id="planes-fibra">Planes de Internet</p>
     <h2 class="section-title" style="text-align:center;margin-bottom:0.5rem;">Elige tu velocidad</h2>
     <p class="section-desc" style="text-align:center;margin:0 auto 3rem;">Planes simétricos con IP fija incluida, sin costos ocultos.</p>
-
     <div class="fibra-plans-grid">
       <div class="fibra-plan">
         <span class="plan-badge badge-cyan">Básico</span>
@@ -569,8 +784,6 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3r
         <a href="https://wa.me/51974297433?text=Hola,%20me%20interesa%20el%20Plan%20Empresa%20de%20200Mbps" target="_blank" class="btn-plan">Cotizar ahora</a>
       </div>
     </div>
-
-    <!-- Servicios fibra -->
     <p class="eyebrow blue" style="margin-top:2rem;" id="servicios">Servicios incluidos</p>
     <h2 class="section-title">Más que internet</h2>
     <p class="section-desc">Soluciones de conectividad y seguridad para negocios en Ate, Lima.</p>
@@ -582,23 +795,276 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3r
       <div class="serv-card"><span class="serv-icon">🏢</span><h3>Soluciones empresariales</h3><p>Planes corporativos con SLA garantizado, VPN y soporte técnico presencial.</p></div>
       <div class="serv-card"><span class="serv-icon">⚙️</span><h3>Soporte técnico 24/7</h3><p>Equipo disponible todo el día. Instalación profesional y atención postventa garantizada.</p></div>
     </div>
-
   </div>
 </section>
 
-<!-- ══ CONTACT ══ -->
+<!-- ══════════════════════════════════════
+     LUCI MOBILE — SEPARADOR
+══════════════════════════════════════ -->
+<div class="brand-divider" id="luci">
+  <div class="brand-divider-line"></div>
+  <div class="brand-divider-tag">
+    <span class="dot-vm"></span>
+    Vall Mobile · Segunda marca
+    <span class="dot-lm"></span>
+    Luci Mobile
+  </div>
+</div>
+
+<!-- ══ LUCI HERO ══ -->
+<div class="luci-hero">
+  <div class="luci-hero-grid"></div>
+  <div class="luci-orb luci-orb1"></div>
+  <div class="luci-orb luci-orb2"></div>
+  <div class="luci-hero-inner">
+    <div class="luci-badge"><span class="luci-badge-dot"></span>Planes Movistar · Chips · Fibra Hogar · CC Las Brisas de Ate</div>
+    <div class="luci-logo-big">LUCI</div>
+    <div class="luci-logo-sub">Mobile</div>
+    <p class="luci-hero-sub">Tu punto de venta Movistar. Chips, líneas nuevas, portabilidad y el mejor internet de fibra óptica para tu hogar.</p>
+    <div class="luci-hero-actions">
+      <a href="https://wa.me/51932762369" target="_blank" class="btn-movistar">📱 Planes Movistar</a>
+      <a href="#luci-fibra" class="btn-lm-accent">🏠 Internet Hogar</a>
+      <a href="#luci-contacto" class="btn-lm-ghost">Contactar →</a>
+    </div>
+    <div class="luci-serv-pills">
+      <span class="serv-pill mv">Movistar Oficial</span>
+      <span class="serv-pill mv">Chips Movistar</span>
+      <span class="serv-pill">Portabilidad</span>
+      <span class="serv-pill">Línea Nueva</span>
+      <span class="serv-pill">Fibra Hogar</span>
+    </div>
+  </div>
+</div>
+
+<!-- Luci stats -->
+<div class="luci-strip">
+  <div class="luci-stat-item"><span class="luci-stat-num" style="color:#4ddb4d">100%</span><div class="luci-stat-label">Punto Movistar oficial</div></div>
+  <div class="luci-stat-item"><span class="luci-stat-num" style="color:var(--lm-ice)">24 hrs</span><div class="luci-stat-label">Activación express</div></div>
+  <div class="luci-stat-item"><span class="luci-stat-num" style="color:var(--lm-accent)">600Mbps</span><div class="luci-stat-label">Velocidad máx. fibra hogar</div></div>
+  <div class="luci-stat-item"><span class="luci-stat-num" style="color:#4ddb4d">4.9★</span><div class="luci-stat-label">Valoración promedio</div></div>
+</div>
+
+<!-- Luci about -->
+<div class="luci-about">
+  <div class="luci-about-inner">
+    <p class="eyebrow lm">Sobre Luci Mobile</p>
+    <div class="about-grid">
+      <div class="luci-about-text">
+        <h2 class="section-title" style="color:var(--lm-ice)">Tu aliado Movistar de confianza</h2>
+        <p>Luci Mobile es un punto de venta autorizado Movistar especializado en planes móviles, chips, portabilidad y líneas nuevas. Nos encontramos en el CC Las Brisas de Ate, tienda 13.</p>
+        <p>Además de los planes Movistar, ofrecemos internet de fibra óptica para el hogar con la mejor velocidad y estabilidad para que toda tu familia esté siempre conectada.</p>
+        <a href="https://wa.me/51932762369" target="_blank" class="btn-lm-accent" style="display:inline-block;margin-top:1.8rem;">Consultar ahora →</a>
+      </div>
+      <div class="luci-feats-grid">
+        <div class="luci-feat"><div class="luci-feat-icon">📶</div><h4>Chips Movistar</h4><p>Chips con activación inmediata. Prepago y postpago disponibles.</p></div>
+        <div class="luci-feat"><div class="luci-feat-icon">🔄</div><h4>Portabilidad</h4><p>Cámbiate a Movistar sin perder tu número. Proceso rápido y sin costo.</p></div>
+        <div class="luci-feat"><div class="luci-feat-icon">✨</div><h4>Línea nueva</h4><p>Obtén tu línea Movistar nueva con los mejores planes del mercado.</p></div>
+        <div class="luci-feat"><div class="luci-feat-icon">🏠</div><h4>Fibra Hogar</h4><p>Internet de fibra óptica para tu hogar. Velocidad y estabilidad garantizada.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ LUCI MOVISTAR PLANES ══ -->
+<div class="luci-movistar" id="luci-planes">
+  <div class="luci-movistar-bg"></div>
+  <div class="luci-movistar-inner">
+    <div class="mv-header-center">
+      <div class="mv-tag">Punto de Venta Autorizado · Planes Móviles</div>
+      <div class="mv-logo-big">Planes Movistar<span class="mv-badge-tag">OFICIAL</span></div>
+      <p class="mv-tagline">Elige el plan que mejor se adapta a tu estilo de vida. Chips, línea nueva y portabilidad disponibles en tienda.</p>
+      <div class="mv-actions">
+        <a href="https://wa.me/51932762369" target="_blank" class="btn-movistar">💬 Consultar planes</a>
+        <a href="#luci-portabilidad" class="btn-lm-ghost">Hacer portabilidad →</a>
+      </div>
+    </div>
+
+    <p class="eyebrow mv" style="text-align:center;margin-bottom:0.5rem;">Planes disponibles</p>
+    <h2 class="section-title" style="text-align:center;margin-bottom:0.5rem;color:var(--lm-ice);">Elige tu plan ideal</h2>
+    <p class="section-desc" style="text-align:center;margin:0 auto 3rem;color:rgba(214,240,255,0.5);">Planes prepago y postpago Movistar para todos los bolsillos.</p>
+
+    <div class="chips-row">
+      <div class="chip-card">
+        <span class="plan-badge badge-mv">Prepago</span>
+        <div class="chip-name">Plan Básico</div>
+        <p class="chip-desc">Perfecto para comunicarte sin compromisos. Recarga cuando quieras.</p>
+        <div class="chip-divider"></div>
+        <ul class="chip-features">
+          <li>Llamadas a Movistar</li>
+          <li>SMS incluidos</li>
+          <li>Datos por recarga</li>
+          <li>Sin contrato</li>
+        </ul>
+        <a href="https://wa.me/51932762369?text=Hola,%20me%20interesa%20el%20Plan%20Básico%20Prepago%20Movistar" target="_blank" class="btn-chip">Consultar plan</a>
+      </div>
+      <div class="chip-card highlight">
+        <span class="plan-badge badge-star">⭐ Más popular</span>
+        <div class="chip-name">Plan Pro Postpago</div>
+        <p class="chip-desc">El más elegido. Datos ilimitados y beneficios exclusivos Movistar.</p>
+        <div class="chip-divider"></div>
+        <ul class="chip-features">
+          <li>Datos ilimitados</li>
+          <li>Llamadas ilimitadas</li>
+          <li>Redes sociales free</li>
+          <li>Roaming habilitado</li>
+        </ul>
+        <a href="https://wa.me/51932762369?text=Hola,%20me%20interesa%20el%20Plan%20Pro%20Postpago%20Movistar" target="_blank" class="btn-chip">Consultar plan</a>
+      </div>
+      <div class="chip-card">
+        <span class="plan-badge badge-ice">Empresarial</span>
+        <div class="chip-name">Plan Empresas</div>
+        <p class="chip-desc">Múltiples líneas para tu equipo con facturación centralizada.</p>
+        <div class="chip-divider"></div>
+        <ul class="chip-features">
+          <li>Líneas múltiples</li>
+          <li>Datos compartidos</li>
+          <li>Facturación empresa</li>
+          <li>Atención preferencial</li>
+        </ul>
+        <a href="https://wa.me/51932762369?text=Hola,%20me%20interesa%20el%20Plan%20Empresas%20Movistar" target="_blank" class="btn-chip">Cotizar ahora</a>
+      </div>
+    </div>
+
+    <!-- Portabilidad -->
+    <div class="portability-banner" id="luci-portabilidad">
+      <div class="port-left">
+        <span class="port-icon">🔄</span>
+        <div class="port-title">Portabilidad a Movistar</div>
+        <p class="port-desc">Cámbiate de operador a Movistar sin perder tu número actual. El proceso es gratuito y lo hacemos por ti en minutos en nuestra tienda del CC Las Brisas de Ate.</p>
+        <a href="https://wa.me/51932762369?text=Hola,%20quiero%20hacer%20portabilidad%20a%20Movistar" target="_blank" class="btn-lm-accent" style="display:inline-block;margin-top:1.2rem;font-size:0.85rem;">Portarme ahora →</a>
+      </div>
+      <div class="port-right">
+        <div class="port-steps">
+          <div class="port-step"><div class="port-step-num">1</div>Escríbenos por WhatsApp</div>
+          <div class="port-step"><div class="port-step-num">2</div>Elige tu plan Movistar</div>
+          <div class="port-step"><div class="port-step-num">3</div>Presentas tu DNI y contrato actual</div>
+          <div class="port-step"><div class="port-step-num">4</div>¡Listo! Tu número ya es Movistar</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="luci-extras-row">
+      <div class="luci-extra-card">
+        <div class="luci-extra-icon">📲</div>
+        <div class="luci-extra-info">
+          <h3>Chips Movistar al instante</h3>
+          <p>Chips prepago y postpago con activación inmediata. Disponibles en nuestra tienda del CC Las Brisas de Ate, tda. 13.</p>
+          <a href="https://wa.me/51932762369?text=Hola,%20quiero%20un%20chip%20Movistar" target="_blank" class="luci-extra-link">Pedir mi chip →</a>
+        </div>
+      </div>
+      <div class="luci-extra-card">
+        <div class="luci-extra-icon">✨</div>
+        <div class="luci-extra-info">
+          <h3>Línea nueva Movistar</h3>
+          <p>Obtén tu línea nueva con el mejor plan. Proceso 100% asistido, te guiamos en cada paso.</p>
+          <a href="https://wa.me/51932762369?text=Hola,%20quiero%20una%20línea%20nueva%20Movistar" target="_blank" class="luci-extra-link">Activar línea nueva →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ LUCI FIBRA HOGAR ══ -->
+<div class="luci-fibra" id="luci-fibra">
+  <div class="luci-fibra-bg"></div>
+  <div class="luci-fibra-inner">
+    <div class="luci-fibra-header">
+      <div class="mv-tag" style="margin-bottom:2rem;">Internet para el Hogar · Fibra Óptica</div>
+      <div class="luci-fibra-logo">INTERNET<span class="hogar">HOGAR</span></div>
+      <p class="luci-fibra-tagline">Fibra óptica para tu casa. Velocidad real, sin cortes, para toda la familia. Streaming, gaming, trabajo remoto y más.</p>
+      <div class="luci-fibra-actions">
+        <a href="https://wa.me/51932762369?text=Hola,%20me%20interesa%20internet%20fibra%20para%20mi%20hogar" target="_blank" class="btn-lm">🏠 Contratar fibra hogar</a>
+        <a href="#luci-planes-fibra" class="btn-lm-ghost">Ver planes →</a>
+      </div>
+      <div class="luci-signal">
+        <div class="luci-signal-rings">
+          <div class="luci-signal-dot"></div>
+          <div class="lring"></div>
+          <div class="lring"></div>
+          <div class="lring"></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="eyebrow lm" style="text-align:center;margin-bottom:0.5rem;" id="luci-planes-fibra">Planes de Internet Hogar</p>
+    <h2 class="section-title" style="text-align:center;margin-bottom:0.5rem;color:var(--lm-ice);">Elige tu velocidad</h2>
+    <p class="section-desc" style="text-align:center;margin:0 auto 3rem;color:rgba(214,240,255,0.5);">Sin límite de datos, con router WiFi incluido.</p>
+
+    <div class="luci-fibra-grid">
+      <div class="luci-fibra-plan">
+        <span class="plan-badge badge-ice">Básico Hogar</span>
+        <div class="chip-name">Plan 200 Mbps</div>
+        <div class="luci-plan-speed">200<span style="font-size:1.2rem;color:rgba(214,240,255,0.4)">Mbps</span></div>
+        <div class="luci-plan-speed-label">Fibra simétrica</div>
+        <p class="chip-desc">Ideal para hogares de 2–3 personas. Streaming HD y videollamadas sin interrupciones.</p>
+        <div class="chip-divider"></div>
+        <ul class="chip-features">
+          <li>Router WiFi incluido</li>
+          <li>Sin límite de datos</li>
+          <li>Instalación gratis</li>
+          <li>Soporte técnico</li>
+        </ul>
+        <a href="https://wa.me/51932762369?text=Hola,%20me%20interesa%20el%20plan%20de%20200Mbps%20hogar" target="_blank" class="btn-chip">Contratar plan</a>
+      </div>
+      <div class="luci-fibra-plan highlight">
+        <span class="plan-badge badge-star">⭐ Más popular</span>
+        <div class="chip-name">Plan 400 Mbps</div>
+        <div class="luci-plan-speed">400<span style="font-size:1.2rem;color:rgba(255,255,255,0.4)">Mbps</span></div>
+        <div class="luci-plan-speed-label">Fibra simétrica</div>
+        <p class="chip-desc" style="color:rgba(214,240,255,0.5)">El favorito. Velocidad premium para familias y trabajo desde casa.</p>
+        <div class="chip-divider"></div>
+        <ul class="chip-features">
+          <li>Router WiFi 6 incluido</li>
+          <li>Sin límite de datos</li>
+          <li>Streaming 4K</li>
+          <li>Gaming online</li>
+        </ul>
+        <a href="https://wa.me/51932762369?text=Hola,%20me%20interesa%20el%20plan%20de%20400Mbps%20hogar" target="_blank" class="btn-chip">Contratar plan</a>
+      </div>
+      <div class="luci-fibra-plan">
+        <span class="plan-badge badge-mv">Ultra Hogar</span>
+        <div class="chip-name">Plan 600 Mbps</div>
+        <div class="luci-plan-speed">600<span style="font-size:1.2rem;color:rgba(214,240,255,0.4)">Mbps</span></div>
+        <div class="luci-plan-speed-label">Fibra simétrica</div>
+        <p class="chip-desc">Para hogares grandes. Múltiples dispositivos conectados sin perder velocidad.</p>
+        <div class="chip-divider"></div>
+        <ul class="chip-features">
+          <li>Router Mesh incluido</li>
+          <li>Hasta 30 dispositivos</li>
+          <li>Streaming 4K múltiple</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a href="https://wa.me/51932762369?text=Hola,%20me%20interesa%20el%20plan%20de%20600Mbps%20hogar" target="_blank" class="btn-chip">Contratar plan</a>
+      </div>
+    </div>
+
+    <p class="eyebrow lm">¿Por qué elegirnos?</p>
+    <h2 class="section-title" style="color:var(--lm-ice);">Todo incluido para tu hogar</h2>
+    <div class="luci-servicios">
+      <div class="luci-serv-card"><span class="serv-icon">📡</span><h3>Fibra óptica pura</h3><p>100% fibra óptica hasta tu puerta. Sin cable coaxial, máxima velocidad y estabilidad.</p></div>
+      <div class="luci-serv-card"><span class="serv-icon">📶</span><h3>WiFi de alta cobertura</h3><p>Router de última generación incluido. Señal potente en todos los rincones del hogar.</p></div>
+      <div class="luci-serv-card"><span class="serv-icon">🎮</span><h3>Gaming & streaming</h3><p>Baja latencia para gaming online. Streaming en 4K sin cortes para toda la familia.</p></div>
+      <div class="luci-serv-card"><span class="serv-icon">🔧</span><h3>Instalación profesional</h3><p>Instalación gratuita con técnicos certificados. Dejamos todo listo y funcionando.</p></div>
+      <div class="luci-serv-card"><span class="serv-icon">♾️</span><h3>Sin límite de datos</h3><p>Navega sin preocupaciones. Descarga, sube y transmite sin límites todo el mes.</p></div>
+      <div class="luci-serv-card"><span class="serv-icon">🛎️</span><h3>Soporte técnico</h3><p>Asistencia técnica disponible para resolver cualquier inconveniente rápidamente.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CONTACT (TODOS) ══ -->
 <section class="section contact-section" id="contacto">
   <div class="section-inner">
     <p class="eyebrow">Contáctanos</p>
     <h2 class="section-title">Estamos para ayudarte</h2>
     <p class="section-desc" style="margin-bottom:2.5rem;">Selecciona el servicio que te interesa y te atendemos de inmediato.</p>
 
-    <div class="contact-tabs">
+    <div class="contact-tabs" id="luci-contacto">
       <button class="ctab active-vm" onclick="switchTab('vm')">📱 Vall Mobile – Celulares</button>
-      <button class="ctab" id="tab-fo" onclick="switchTab('fo')">🌐 FibraOn – Internet Empresarial</button>
+      <button class="ctab" id="tab-fo" onclick="switchTab('fo')">🌐 FibraOn – Empresas</button>
+      <button class="ctab" id="tab-lm" onclick="switchTab('lm')">📶 Luci Mobile – Movistar & Hogar</button>
     </div>
 
-    <!-- Vall Mobile contact -->
+    <!-- Vall Mobile -->
     <div class="contact-panel active" id="panel-vm">
       <div>
         <div class="contact-cards">
@@ -645,7 +1111,7 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3r
       </div>
     </div>
 
-    <!-- FibraOn contact -->
+    <!-- FibraOn -->
     <div class="contact-panel" id="panel-fo">
       <div>
         <div class="contact-cards">
@@ -690,6 +1156,54 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3r
       </div>
     </div>
 
+    <!-- Luci Mobile -->
+    <div class="contact-panel" id="panel-lm">
+      <div>
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="cc-icon mvicon">📱</div>
+            <div><div class="cc-label mv">WhatsApp Luci Mobile</div><div class="cc-value"><a href="https://wa.me/51932762369" target="_blank" style="color:inherit;text-decoration:none;">+51 932 762 369</a></div></div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon lm">📍</div>
+            <div><div class="cc-label lm">Dirección</div><div class="cc-value">CC Las Brisas de Ate, Tda. 13 – Lima, Perú 150103</div></div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon lm">🕐</div>
+            <div><div class="cc-label lm">Horario</div><div class="cc-value">Lun – Sáb: 9:00 – 20:00 hrs</div></div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon mvicon">✅</div>
+            <div><div class="cc-label mv">Servicios</div><div class="cc-value">Chips · Portabilidad · Línea nueva · Fibra Hogar</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <div class="cf-title">Consulta Luci Mobile</div>
+        <div class="cf-sub">Te respondemos en menos de 24 horas.</div>
+        <div class="form-row">
+          <div class="fg lm-focus"><input type="text" placeholder="Nombre completo"></div>
+          <div class="fg lm-focus"><input type="tel" placeholder="Teléfono"></div>
+        </div>
+        <div class="fg lm-focus"><input type="email" placeholder="Correo electrónico"></div>
+        <div class="fg lm-focus">
+          <select>
+            <option value="" disabled selected>¿Qué servicio te interesa?</option>
+            <option>Chip Movistar Prepago</option>
+            <option>Plan Postpago Movistar</option>
+            <option>Portabilidad a Movistar</option>
+            <option>Línea nueva Movistar</option>
+            <option>Internet Fibra Hogar 200Mbps</option>
+            <option>Internet Fibra Hogar 400Mbps</option>
+            <option>Internet Fibra Hogar 600Mbps</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="fg lm-focus"><textarea placeholder="Cuéntanos en qué podemos ayudarte..."></textarea></div>
+        <button class="btn-submit lm-sub" onclick="window.open('https://wa.me/51932762369','_blank')">Enviar por WhatsApp 💬</button>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -701,8 +1215,10 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3r
       <div class="footer-sub-brand">
         <span class="footer-sub-label">Incluye</span>
         <span class="footer-fibra">FIBRA<span class="on">ON</span></span>
+        <span class="footer-sub-label">·</span>
+        <span class="footer-luci">LUCI Mobile</span>
       </div>
-      <p class="footer-tagline">Tecnología y conectividad para tu vida y tu negocio en Ate, Lima.</p>
+      <p class="footer-tagline">Tecnología, conectividad empresarial y planes Movistar para tu vida y negocio en Ate, Lima.</p>
     </div>
     <div class="footer-cols">
       <div class="footer-col">
@@ -724,37 +1240,67 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 3r
         </ul>
       </div>
       <div class="footer-col">
+        <h5>Luci Mobile</h5>
+        <ul>
+          <li><a href="#luci-planes">Planes Movistar</a></li>
+          <li><a href="#luci-portabilidad">Portabilidad</a></li>
+          <li><a href="#luci-fibra">Internet Hogar</a></li>
+          <li><a href="#luci-contacto">Contactar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
         <h5>Contacto</h5>
         <ul>
-          <li><a href="https://wa.me/51967282658" target="_blank">📱 +51 967 282 658</a></li>
-          <li><a href="https://wa.me/51974297433" target="_blank">🌐 +51 974 297 433</a></li>
-          <li><a href="#">CC Las Brisas de Ate</a></li>
-          <li><a href="#">Ate Vitarte, Lima</a></li>
+          <li><a href="https://wa.me/51967282658" target="_blank">📱 Vall: +51 967 282 658</a></li>
+          <li><a href="https://wa.me/51974297433" target="_blank">🌐 FibraOn: +51 974 297 433</a></li>
+          <li><a href="https://wa.me/51932762369" target="_blank">📶 Luci: +51 932 762 369</a></li>
+          <li><a href="#">CC Las Brisas de Ate, Lima</a></li>
         </ul>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2025 Vall Mobile · FibraOn es una submarca de Vall Mobile · Ate, Lima, Perú</div>
+    <div class="footer-copy">© 2025 Vall Mobile · FibraOn · Luci Mobile · CC Las Brisas de Ate, Lima, Perú</div>
     <div class="footer-badges">
       <span class="fbadge green">Equipos Originales</span>
-      <span class="fbadge blue">Fibra Óptica</span>
+      <span class="fbadge blue">FibraOn Empresas</span>
+      <span class="fbadge mv">Movistar Oficial</span>
+      <span class="fbadge lm">Fibra Hogar</span>
     </div>
   </div>
 </footer>
 
 <script>
+function toggleMenu() {
+  const links = document.querySelector('.nav-links');
+  links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+  if (links.style.display === 'flex') {
+    links.style.flexDirection = 'column';
+    links.style.position = 'absolute';
+    links.style.top = '64px';
+    links.style.left = '0';
+    links.style.right = '0';
+    links.style.background = 'rgba(7,8,10,0.97)';
+    links.style.padding = '1.5rem 5%';
+    links.style.gap = '1.2rem';
+    links.style.borderBottom = '1px solid rgba(255,255,255,0.07)';
+  }
+}
+
 function switchTab(tab) {
   const panels = document.querySelectorAll('.contact-panel');
   const tabs = document.querySelectorAll('.ctab');
   panels.forEach(p => p.classList.remove('active'));
-  tabs.forEach(t => { t.classList.remove('active-vm'); t.classList.remove('active-fo'); });
+  tabs.forEach(t => { t.classList.remove('active-vm'); t.classList.remove('active-fo'); t.classList.remove('active-lm'); });
   if (tab === 'vm') {
     document.getElementById('panel-vm').classList.add('active');
     tabs[0].classList.add('active-vm');
-  } else {
+  } else if (tab === 'fo') {
     document.getElementById('panel-fo').classList.add('active');
     tabs[1].classList.add('active-fo');
+  } else {
+    document.getElementById('panel-lm').classList.add('active');
+    tabs[2].classList.add('active-lm');
   }
 }
 </script>
